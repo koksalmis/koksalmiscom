@@ -30,6 +30,7 @@ export default async function handler(req, res) {
 
         // redis connection
         let redis = new Redis(process.env.REDIS_URL);
+        // redis write
         redis.lpush(url, JSON.stringify(comment))
         redis.quit()
 
@@ -37,9 +38,16 @@ export default async function handler(req, res) {
     }
 
 
-
     if (req.method == "GET") {
-        res.status(200).json({name: 'Yorumlar'})
+        const {url} = req.query
+
+        let redis = new Redis(process.env.REDIS_URL)
+        const comments = await redis.lrange(url, 0, -1)
+        redis.quit()
+
+        const data = comments.map((o) => JSON.parse(o))
+
+        res.status(200).json(data)
     }
 
 
