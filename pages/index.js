@@ -1,24 +1,27 @@
 function HomePage() {
-  return (
-    <>
-      <div className="site-container">
-        <div className="space-y-4">
-          <h1 className="text-2xl font-bold">
-            I'm Enes.I am a Software Engineer <a href="https://www.tompay.com.tr/">@Technology of Money</a>
-          </h1>
-          <p>
-            I interested in Microservice Architecture, Docker, Kubernetes,
-            Desingn Patterns, Payment Systems
-          </p>
+    return (
+        <>
+            <div className="site-container">
+                <div className="space-y-3">
+                    <h2 className="shine text-2xl leading-snug">
+                        <b className="font-semibold">I'm Enes 👋</b><br/>
+                        Software Engineer <a href="https://www.tompay.com.tr/"
+                                             className="font-medium text-blue-600 dark:text-blue-500 hover:underline">@Technology
+                        of Money</a>
+                    </h2>
+                    <p>
+                        Interested in Microservices, Docker, Kubernetes,
+                        Design Patterns, Payment Systems
+                    </p>
 
-          <p>In this blog, I will share my thoughts, projects and interests</p>
-        </div>
-      </div>
-      <div className="site-4xl-container mt-20">
-        <img src="/view.jpg" />
-      </div>
-    </>
-  )
+                    <p>In this blog, I will share my thoughts, projects and interests</p>
+                </div>
+            </div>
+            <div className="max-w-screen-xl mx-auto px-6 mt-20" align="center">
+                <img alt="GIF" src="https://github.com/abhisheknaiidu/abhisheknaiidu/blob/master/code.gif?raw=true"/>
+            </div>
+        </>
+    )
 }
 
 export default HomePage
