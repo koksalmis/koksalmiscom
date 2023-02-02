@@ -1,11 +1,11 @@
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import {docco} from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+import {gruvboxDark} from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 
 const Pre = ({children, className}) => {
 
     const lang = className.split("-")[1]
     return (
-        <SyntaxHighlighter language={lang} style={docco}>
+        <SyntaxHighlighter language={lang} style={gruvboxDark}>
             {children}
         </SyntaxHighlighter>
     );
